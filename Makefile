@@ -46,10 +46,10 @@ black-check:
 	python -m black --check .
 
 ruff:
-	python -m ruff .
+	python -m ruff check .
 
 ruff-fmt:
-	python -m ruff --fix-only --unsafe-fixes .
+	python -m ruff check --fix-only --unsafe-fixes .
 
 test:
 	python -m pytest
@@ -81,5 +81,6 @@ db.restore:
 
 poetry.requirements:
 	poetry export --without-hashes --without dev -f requirements.txt -o requirements.txt
+	
 poetry.requirements.dev:
 	poetry export --without-hashes --with dev -f requirements.txt -o requirements-dev.txt

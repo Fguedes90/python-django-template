@@ -1,5 +1,3 @@
-version: '3.9'
-
 x-common: &common
   env_file:
     - .env
@@ -94,6 +92,18 @@ services:
       - api
     volumes:
       - .:/application
+
+  flower:
+    <<: *common
+    build: .
+    command: >
+      celery -A proj flower --broker=${CELERY_BROKER_URL}
+    restart: unless-stopped
+    ports:
+      - "${FLOWER_PORT:-5555}:5555"
+    depends_on:
+      - rabbitmq
+      - celery
 
   migrations:
     <<: *common

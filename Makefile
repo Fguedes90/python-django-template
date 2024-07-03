@@ -54,6 +54,9 @@ ruff-fmt:
 test:
 	python -m pytest
 
+test.coverage:
+	pytest --cov=myproj tests/
+
 mypy:
 	python -m mypy .
 
@@ -75,3 +78,8 @@ db.restore:
 
 	@docker exec -i -e PGPASSWORD=${POSTGRES_PASSWORD} ${COMPOSE_PROJECT_NAME}-db-1 psql -U ${POSTGRES_USER} < ${BACKUP_PATH}
 	@echo "Database restored from '${BACKUP_PATH}'"
+
+poetry.requirements:
+	poetry export --without-hashes --without dev -f requirements.txt -o requirements.txt
+poetry.requirements.dev:
+	poetry export --without-hashes --with dev -f requirements.txt -o requirements-dev.txt

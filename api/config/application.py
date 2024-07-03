@@ -4,8 +4,8 @@ from os import getenv
 
 from api.config.silk import SILKY_MIDDLEWARE_CLASS, USE_SILK
 
-PROJECT_NAME = getenv("PROJECT_NAME", "django_template")
-PROJECT_VERBOSE_NAME = getenv("PROJECT_VERBOSE_NAME", "Django Template").strip("'\"")
+PROJECT_NAME = getenv("PROJECT_NAME")
+PROJECT_VERBOSE_NAME = getenv("PROJECT_VERBOSE_NAME",).strip("'\"")
 
 ENVIRONMENT = getenv("ENVIRONMENT", "local")
 HOST = getenv("HOST", "localhost")

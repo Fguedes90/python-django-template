@@ -24,7 +24,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    host.strip() for host in getenv("CSRF_TRUSTED_ORIGINS", "http://localhost").split(",")
+    host.strip()
+    for host in getenv("CSRF_TRUSTED_ORIGINS", "http://localhost").split(",")
 ]
 
 CORS_ALLOW_ALL_ORIGINS = getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() == "true"

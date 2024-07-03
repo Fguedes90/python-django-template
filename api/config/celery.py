@@ -12,7 +12,9 @@ result_serializer = "json"
 accept_content = ["json"]
 
 task_always_eager = getenv("CELERY_TASK_ALWAYS_EAGER", "false").lower() == "true"
-task_eager_propagates = getenv("CELERY_TASK_EAGER_PROPAGATES", "false").lower() == "true"
+task_eager_propagates = (
+    getenv("CELERY_TASK_EAGER_PROPAGATES", "false").lower() == "true"
+)
 task_ignore_result = getenv("CELERY_TASK_IGNORE_RESULT", "false").lower() == "true"
 
 timezone = TIME_ZONE

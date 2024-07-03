@@ -5,7 +5,7 @@ from os import getenv
 from api.config.silk import SILKY_MIDDLEWARE_CLASS, USE_SILK
 
 PROJECT_NAME = getenv("PROJECT_NAME")
-PROJECT_VERBOSE_NAME = getenv("PROJECT_VERBOSE_NAME",).strip("'\"")
+PROJECT_VERBOSE_NAME = getenv("PROJECT_VERBOSE_NAME")
 
 ENVIRONMENT = getenv("ENVIRONMENT", "local")
 HOST = getenv("HOST", "localhost")

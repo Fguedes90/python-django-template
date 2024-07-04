@@ -5,7 +5,7 @@ from split_settings.tools import include
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "test_postgres",
+        "NAME": "test_postgres_temp",
         "USER": "postgres",
         "PASSWORD": "your-super-secret-and-long-postgres-password",
         "HOST": "pgbouncer",

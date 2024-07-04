@@ -37,7 +37,7 @@ fmt:
 	make -k ruff-fmt black
 
 lint:
-	make -k ruff black-check mypy
+	make -k ruff check black-check mypy
 
 black:
 	python -m black .

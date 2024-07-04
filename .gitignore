@@ -149,3 +149,4 @@ backups/
 
 
 poetry.lock
+.aider*

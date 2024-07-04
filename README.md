@@ -21,6 +21,7 @@ This Django API Template is designed to be robust, scalable, and secure, with fe
 - **[Celery](https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html) with [RabbitMQ](https://rabbitmq.com/) and [Redis](https://redis.io/)**: Leverage Celery for asynchronous task processing, using RabbitMQ as a message broker and Redis as a backend for storing results.
 
 - **[Sentry for Error Tracking](https://sentry.io/)**: Integrate with Sentry for real-time error tracking and monitoring, helping you identify and fix issues rapidly.
+- **[Flower for Celery Monitoring](https://flower.readthedocs.io/)**: Use Flower to monitor Celery jobs, providing a web-based tool for real-time monitoring and administration.
 
 - **[Django Rest Framework (DRF)](https://www.django-rest-framework.org/)**: Use Django Rest Framework for building RESTful APIs, with support for authentication, serialization, and more.
    - **[DRF Spectacular for OpenAPI](https://drf-spectacular.readthedocs.io/)**: Use DRF Spectacular for OpenAPI documentation, with support for customizing the schema and UI.
@@ -127,6 +128,10 @@ By following this guide and utilizing the advanced features, you'll be able to s
    - Follow the steps in the [Configuration Guide](#configuration-guide) to set up the `.env` file.
 
 #### 3. Docker Compose
+   - **Run Flower for Celery Monitoring**:
+     ```bash
+     docker compose up -d flower
+     ```
    - **Run Docker Compose**:
      ```bash
      docker compose up -d

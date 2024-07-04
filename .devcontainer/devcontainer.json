@@ -43,14 +43,29 @@
 			"version": "latest"
 		},
 		"ghcr.io/hspaans/devcontainer-features/pytest:1": {
-			"version": "latest",
-			"plugins": "pytest-testinfra"
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"sitoi.ai-commit",
+				"ms-python.black-formatter",
+				"ms-azuretools.vscode-docker",
+				"tamasfe.even-better-toml",
+				"mhutchie.git-graph",
+				"ms-python.isort",
+				"ms-toolsai.jupyter-renderers",
+				"ms-vscode.makefile-tools",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"ms-python.debugpy"
+			]
 		}
 	}
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
+	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -62,4 +77,5 @@
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
 }

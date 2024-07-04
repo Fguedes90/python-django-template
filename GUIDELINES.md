@@ -35,6 +35,20 @@
  - Write efficient code.                                                                             
  - Profile and optimize performance-critical sections.                                               
                                                                                                      
+ ## Django REST Framework                                                                            
+ - Use ViewSets and Routers for standard CRUD operations.                                            
+ - Use serializers to validate and transform input data.                                             
+ - Handle permissions and authentication properly.                                                   
+ - Write custom exceptions and error handlers.                                                       
+ - Use pagination for large querysets.                                                               
+                                                                                                     
+ ## Celery                                                                                           
+ - Use Celery for background tasks and asynchronous processing.                                      
+ - Configure Celery with proper broker and backend settings.                                         
+ - Use retries and task time limits to handle failures.                                              
+ - Monitor Celery tasks and workers.                                                                 
+ - Keep tasks idempotent and side-effect free.                                                       
+                                                                                                     
  ## Collaboration                                                                                    
  - Communicate effectively with team members.                                                        
  - Respect others' opinions and feedback.  

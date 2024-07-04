@@ -82,3 +82,6 @@ db.restore:
 poetry.export.requirements:
 	poetry export --without-hashes --without dev -f requirements.txt -o requirements.txt && \
 	poetry export --without-hashes --with dev -f requirements.txt -o requirements-dev.txt
+
+docker.build.image.dev:
+	docker build -t "devimage:latest" -f "Dockerfile.dev" .

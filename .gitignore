@@ -150,3 +150,4 @@ backups/
 
 poetry.lock
 .aider*
+personal_tools/
